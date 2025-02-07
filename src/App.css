@@ -1,38 +1,107 @@
+body{
+  font-family: 'Ariel', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:#4fa3d1;
+}
+
+
+/* Center the content in the screen */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  background-image: url('https://your-image-url.com'); /* Example background image */
+  background-size: cover;
+  background-position: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Styling the header */
+.App-header {
+  text-align: center;
+  gap: 15px;
+  color: white;
+  font-size: 34px;
+  margin-bottom: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* Input and button styles */
+input {
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  color: white;
+  margin-top: 10px;
+  background-color: #05366a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #6389af;
+}
+
+/* Styling for the weather info section */
+.weather-info {
+  margin-top: 30px;
+  color: white;
+  background-color: rgb(4, 195, 243);
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.weather-info h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.weather-info p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .App {
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .weather-info {
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
   }
 }
